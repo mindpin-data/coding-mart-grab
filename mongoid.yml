@@ -1,0 +1,6 @@
+development:
+  clients:
+    default:
+      database: coding-mart
+      hosts:
+        - localhost:27017
