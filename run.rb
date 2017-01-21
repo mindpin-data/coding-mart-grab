@@ -11,8 +11,7 @@ require_relative './lib/mart-page'
 Mongoid.load!("mongoid.yml", :development)
 
 def grab(id)
-  g = CodingMart::Grabber.new(id)
-  g.save
+  grab_once(id)
   if id < 6000
     grab id + 1
   end
@@ -23,5 +22,5 @@ def grab_once(id)
   g.save
 end
 
-# grab(2200)
-grab_once(5471)
+grab(4000)
+# grab_once(5471)
